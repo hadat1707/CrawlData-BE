@@ -1,0 +1,50 @@
+### Simple URL - Get HTML
+POST http://localhost:5000/api/crawl/simple
+Content-Type: application/json
+
+"https://example.com"
+
+###
+
+### Get HTML with Request Object
+POST http://localhost:5000/api/crawl/html
+Content-Type: application/json
+
+{
+  "url": "https://example.com"
+}
+
+###
+
+### Analyze HTML and Get Parent Selectors
+POST http://localhost:5000/api/crawl/analyze
+Content-Type: application/json
+
+{
+  "url": "https://example.com",
+  "prompt": "Find the parent selector for the main content area"
+}
+
+###
+
+### Find Product Card Selectors
+POST http://localhost:5000/api/crawl/analyze
+Content-Type: application/json
+
+{
+  "url": "https://travel.com.vn/du-lich-nuoc-ngoai/tour-phap.aspx",
+  "prompt": "Find the CSS selectors for product cards or tour listing containers"
+}
+
+###
+
+### Find Navigation Menu Selectors
+POST http://localhost:5000/api/crawl/analyze
+Content-Type: application/json
+
+{
+  "url": "https://example.com",
+  "prompt": "Find the CSS selectors for the main navigation menu"
+}
+
+###
